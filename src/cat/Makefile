@@ -1,13 +1,13 @@
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -std=c11
-TARGET = my_cat
+TARGET = s21_cat
 
-all: my_cat
+all: s21_cat
 
 s21_cat:
-	$(CC) $(FLAGS) my_cat.c -o my_cat
+	$(CC) $(FLAGS) s21_cat.c -o s21_cat
 
 rebuild: clean all
 
 clean:
-	rm my_cat
+	rm s21_cat

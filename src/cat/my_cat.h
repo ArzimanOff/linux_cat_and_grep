@@ -1,5 +1,5 @@
-#ifndef SRC_CAT_MAIN_H_
-#define SRC_CAT_MAIN_H_
+#ifndef SRC_CAT_H
+#define SRC_CAT_H
 #include <getopt.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -16,16 +16,17 @@ typedef struct {
   bool s;
   bool t;
   bool v;
-} Flags;
+} cat_flags;
 
-int analyze_arguments(Flags *p, int argc, char *argv[], int *fcount, char ***files);
+int analyze_arguments(cat_flags *p, int argc, char *argv[], int *fcount,
+                      char ***files);
 void print_no_file_error(char **files, int i);
 int read_str(char *str, FILE *fp);
-int run_text_processing(Flags p, int fcount, char **files);
-void process_flag_t(char *buffer, int *count);
-void process_flag_e(char *buffer, int *count);
-void process_flag_v(char *buffer, int *count);
-int print_str(Flags p, int *last_empty, int *num_of_line, int *lastendsnewstr, char *str, int count, int empty);
+int run_text_processing(cat_flags p, int fcount, char **files);
+void process_flag_t(char *current_line, int *count);
+void process_flag_e(char *current_line, int *count);
+void process_flag_v(char *current_line, int *count);
+int print_str(cat_flags p, int *last_line_empty, int *num_of_line,
+              int *last_char_end_line, char *str, int count, int empty);
 
-
-#endif  // SRC_CAT_MAIN_H_
+#endif
