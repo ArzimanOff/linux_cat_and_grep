@@ -19,10 +19,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var $SHABLO $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -31,7 +31,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -45,10 +45,10 @@ do
         then
             TEST1="$var $var2 $SHABLO $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
             echo "$TEST1"
-            ./s21_grep $TEST1 > testtxt/s21_grep${var}${var2}.txt
+            ./my_grep $TEST1 > testtxt/my_grep${var}${var2}.txt
             grep $TEST1 > testtxt/grep${var}${var2}.txt
-            DIFF_RES="$(diff -s testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
-            if [ "$DIFF_RES" == "Files testtxt/s21_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
+            DIFF_RES="$(diff -s testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
+            if [ "$DIFF_RES" == "Files testtxt/my_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
               then
                 echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -57,7 +57,7 @@ do
                 echo "$TEST1" >> log.txt
                 (( COUNTER_FAIL++ ))
             fi
-            rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+            rm testtxt/my_grep$var.txt testtxt/grep$var.txt
         fi
           
   done
@@ -68,10 +68,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var $SHABLON $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -80,7 +80,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -94,10 +94,10 @@ do
         then
             TEST1="$var $var2 $SHABLON $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
             echo "$TEST1"
-            ./s21_grep $TEST1 > testtxt/s21_grep${var}${var2}.txt
+            ./my_grep $TEST1 > testtxt/my_grep${var}${var2}.txt
             grep $TEST1 > testtxt/grep${var}${var2}.txt
-            DIFF_RES="$(diff -s testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
-            if [ "$DIFF_RES" == "Files testtxt/s21_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
+            DIFF_RES="$(diff -s testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
+            if [ "$DIFF_RES" == "Files testtxt/my_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
               then
                 echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -106,7 +106,7 @@ do
                 echo "$TEST1" >> log.txt
                 (( COUNTER_FAIL++ ))
             fi
-            rm testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
+            rm testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
         fi
           
   done
@@ -120,10 +120,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var $SHABLON2 $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -132,7 +132,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -146,10 +146,10 @@ do
         then
             TEST1="$var $var2 $SHABLON2 $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
             echo "$TEST1"
-            ./s21_grep $TEST1 > testtxt/s21_grep${var}${var2}.txt
+            ./my_grep $TEST1 > testtxt/my_grep${var}${var2}.txt
             grep $TEST1 > testtxt/grep${var}${var2}.txt
-            DIFF_RES="$(diff -s testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
-            if [ "$DIFF_RES" == "Files testtxt/s21_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
+            DIFF_RES="$(diff -s testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
+            if [ "$DIFF_RES" == "Files testtxt/my_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
               then
                 echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -158,7 +158,7 @@ do
                 echo "$TEST1" >> log.txt
                 (( COUNTER_FAIL++ ))
             fi
-            rm testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
+            rm testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
         fi
           
   done
@@ -169,10 +169,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var \"$SHABLON3\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -181,7 +181,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -189,10 +189,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var \"$SHABLON3\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -201,7 +201,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -209,10 +209,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var \"$SHABLON4\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -221,7 +221,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -229,10 +229,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var \"$SHABLON5\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -241,7 +241,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -250,10 +250,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var -f texts/pattern.txt  $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -262,7 +262,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -270,10 +270,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var -f texts/pattern.txt $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -282,7 +282,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -290,10 +290,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var -f texts/pattern.txt -f texts/pattern2.txt $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -302,7 +302,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -311,10 +311,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var -f texts/pattern.txt \"$SHABLON4\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -323,7 +323,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 
@@ -335,10 +335,10 @@ do
         then
             TEST1="$var $var2 a $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
             echo "$TEST1"
-            ./s21_grep $TEST1 > testtxt/s21_grep${var}${var2}.txt
+            ./my_grep $TEST1 > testtxt/my_grep${var}${var2}.txt
             grep $TEST1 > testtxt/grep${var}${var2}.txt
-            DIFF_RES="$(diff -s testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
-            if [ "$DIFF_RES" == "Files testtxt/s21_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
+            DIFF_RES="$(diff -s testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
+            if [ "$DIFF_RES" == "Files testtxt/my_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
               then
                 echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -347,7 +347,7 @@ do
                 echo "$TEST1" >> log.txt
                 (( COUNTER_FAIL++ ))
             fi
-           rm testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
+           rm testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
         fi
           
   done
@@ -361,10 +361,10 @@ do
         then
             TEST1="$var $var2 \"$SHABLON4\" $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
             echo "$TEST1"
-            ./s21_grep $TEST1 > testtxt/s21_grep${var}${var2}.txt
+            ./my_grep $TEST1 > testtxt/my_grep${var}${var2}.txt
             grep $TEST1 > testtxt/grep${var}${var2}.txt
-            DIFF_RES="$(diff -s testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
-            if [ "$DIFF_RES" == "Files testtxt/s21_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
+            DIFF_RES="$(diff -s testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt)"
+            if [ "$DIFF_RES" == "Files testtxt/my_grep${var}${var2}.txt and testtxt/grep${var}${var2}.txt are identical" ]
               then
                 echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -373,7 +373,7 @@ do
                 echo "$TEST1" >> log.txt
                 (( COUNTER_FAIL++ ))
             fi
-           rm testtxt/s21_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
+           rm testtxt/my_grep${var}${var2}.txt testtxt/grep${var}${var2}.txt
         fi
           
   done
@@ -383,10 +383,10 @@ for var in -v -c -l -n -i -h -s -o
 do
           TEST1="$var ^[A-Z] $FILENAME1 $FILENAME2 $FILENAME3 $FILENAME4 $FILENAME5"
           # echo "$TEST1"
-          ./s21_grep $TEST1 > testtxt/s21_grep$var.txt
+          ./my_grep $TEST1 > testtxt/my_grep$var.txt
           grep $TEST1 > testtxt/grep$var.txt
-          DIFF_RES="$(diff -s testtxt/s21_grep$var.txt testtxt/grep$var.txt)"
-          if [ "$DIFF_RES" == "Files testtxt/s21_grep$var.txt and testtxt/grep$var.txt are identical" ]
+          DIFF_RES="$(diff -s testtxt/my_grep$var.txt testtxt/grep$var.txt)"
+          if [ "$DIFF_RES" == "Files testtxt/my_grep$var.txt and testtxt/grep$var.txt are identical" ]
             then
               echo "SUCCES $TEST1"
               (( COUNTER_SUCCESS++ ))
@@ -395,7 +395,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm testtxt/s21_grep$var.txt testtxt/grep$var.txt
+          rm testtxt/my_grep$var.txt testtxt/grep$var.txt
 
 done
 

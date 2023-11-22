@@ -5,8 +5,8 @@ FAIL=0
 COUNTER=0
 DIFF=""
 
-s21_command=(
-    "./s21_cat"
+my_command=(
+    "./my_cat"
     )
 sys_command=(
     "cat"
@@ -50,9 +50,9 @@ gnu=(
 )
 run_test() {
     param=$(echo $@ | sed "s/FLAGS/$var/")
-    valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose -q --log-file="${s21_command[@]}".log ./"${s21_command[@]}" $param > /dev/null
-    leak=$(grep -ic -A10000 "LEAK SUMMARY:" "${s21_command[@]}".log || true)
-    leak2=$(grep -ic -A10000 "ERROR SUMMARY: [^0]" "${s21_command[@]}".log || true)
+    valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose -q --log-file="${my_command[@]}".log ./"${my_command[@]}" $param > /dev/null
+    leak=$(grep -ic -A10000 "LEAK SUMMARY:" "${my_command[@]}".log || true)
+    leak2=$(grep -ic -A10000 "ERROR SUMMARY: [^0]" "${my_command[@]}".log || true)
     let "COUNTER++"
     if [ "$leak" -eq "0" ] && [ "$leak2" -eq "0" ]
     then
@@ -62,7 +62,7 @@ run_test() {
         let "FAIL++"
         echo "$COUNTER - Fail $param"
     fi
-    rm -f "${s21_command[@]}".log "${sys_command[@]}".log
+    rm -f "${my_command[@]}".log "${sys_command[@]}".log
 }
 
 echo "^^^^^^^^^^^^^^^^^^^^^^^"

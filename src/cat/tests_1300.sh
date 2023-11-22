@@ -5,8 +5,8 @@ FAIL=0
 COUNTER=0
 DIFF=""
 
-s21_command=(
-    "./s21_cat"
+my_command=(
+    "./my_cat"
     )
 sys_command=(
     "cat"
@@ -52,11 +52,11 @@ gnu=(
 )
 run_test() {
     param=$(echo "$@" | sed "s/FLAGS/$var/")
-    "${s21_command[@]}" $param > "${s21_command[@]}".log
+    "${my_command[@]}" $param > "${my_command[@]}".log
     "${sys_command[@]}" $param > "${sys_command[@]}".log
-    DIFF="$(diff -s "${s21_command[@]}".log "${sys_command[@]}".log)"
+    DIFF="$(diff -s "${my_command[@]}".log "${sys_command[@]}".log)"
     let "COUNTER++"
-    if [ "$DIFF" == "Files "${s21_command[@]}".log and "${sys_command[@]}".log are identical" ]
+    if [ "$DIFF" == "Files "${my_command[@]}".log and "${sys_command[@]}".log are identical" ]
     then
         let "SUCCESS++"
         echo "$COUNTER - Success $param"
@@ -64,7 +64,7 @@ run_test() {
         let "FAIL++"
         echo "$COUNTER - Fail $param"
     fi
-    rm -f "${s21_command[@]}".log "${sys_command[@]}".log
+    rm -f "${my_command[@]}".log "${sys_command[@]}".log
 }
 
 echo "^^^^^^^^^^^^^^^^^^^^^^^"

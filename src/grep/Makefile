@@ -1,13 +1,13 @@
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -std=c11
-TARGET = s21_grep
+TARGET = my_grep
 
-all: s21_grep
+all: my_grep
 
-s21_grep:
-	$(CC) $(FLAGS) s21_grep.c -o s21_grep
+my_grep:
+	$(CC) $(FLAGS) my_grep.c -o my_grep
 
 rebuild: clean all
 
 clean:
-	rm s21_grep
+	rm my_grep
